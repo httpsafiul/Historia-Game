@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    width:100vw;
+    /* overflow:hidden; */
+    background-color: #fdacf4;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+    width:100%;
+    overflow:hidden;
+}
+
+#timeline {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #caf4ff;
+    border: 1px solid #9c765f;
+    border-radius: 10px;
+    min-height: 50px;
+    width: 100vw;
+    justify-content: center;
+    /* flex-wrap: nowrap; */
+    overflow: scroll;
+}
+
+#current-card-container {
+    display: flex;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #eae2b4;
+    border: 2px dashed #6a4619;
+    border-radius: 4px;
+    width: 200px;
+    min-height: 200px;
+    justify-content: center;
+}
+
+.card {
+    margin: 5px;
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    background-color: #f8e3f7;
+    cursor: grab;
+    user-select: none;
+    
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    width: 300px;
+       
+    font-family: Arial, sans-serif;
+}
+
+.card .name {
+text-decoration: underline black;
+font-style: italic;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: #000000;
+text-align: center;
+font-size: 18px;
+font-weight: bold;
+}
+
+.card img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+
+}
+
+.card .description {
+    font-size: 12px;
+    text-align: center;
+    font-weight:lighter;
+    border: 1px solid black;
+
+    margin-top: 5px; 
+
+    background-color: #a7def5;
+    border-radius:3px ;
+        margin: 2px;
+        padding: 3px;
+        color: #333;
+        font-size: 14px;
+        
+}
+
+.card .date {
+    display: none;
+
+    border-radius: 5px;
+    border: 2px solid green;
+    background-color: #2aca4f;
+    
+    /* margin-top: 5px; */
+    padding: 10px;
+    
+        color: #020202;
+        font-weight: bold;
+        text-align: center;
+        font-size: 15px;
+}
+
+/* for the display message */
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+} 
+
+#next-card-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid rgb(255, 255, 255);
+    /* -webkit-text-stroke: 0.1px rgb(255, 255, 255); */
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#next-card-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.card.dragging {
+    opacity: 0.7;
+    border: 2px dashed #000;
+}
+
+.card.correct {
+    border: 2px solid green;
+    background-color: #e0ffe0;
+    cursor:default
+}
+
+.card.incorrect {
+    border: 2px solid red;
+    background-color: #ffe0e0;
+}
