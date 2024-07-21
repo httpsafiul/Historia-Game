@@ -27,8 +27,8 @@ body {
     border: 1px solid #9c765f;
     border-radius: 10px;
     min-height: 50px;
-    width: 100vw;
-    justify-content: center;
+    width: 100%;
+    justify-content: stretch;
     /* flex-wrap: nowrap; */
     overflow: scroll;
 }
@@ -48,22 +48,18 @@ body {
 .card {
     margin: 5px;
     padding: 10px;
-
+    width: 200px;
+    min-width: 200px;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
     background-color: #f8e3f7;
     cursor: grab;
     user-select: none;
-    
     display: flex;
     flex-direction: column;
-
-    text-align: center;
-    width: 300px;
-       
+    text-align: center;       
     font-family: Arial, sans-serif;
 }
 
